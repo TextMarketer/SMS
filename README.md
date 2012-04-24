@@ -39,42 +39,42 @@ The following is a complete example of using the REST client library. The C# RES
 throw exceptions, which means that you need to place any function calls in a try-catch block, as
 follows:
 
-`
-using System;
-using RestAPI;
-using System.Collections;
 
-namespace ExampleRestAPI
-{
-    class Example
-    {
-        static void Main(string[] args)
-        {
-            RestClient rClient = new RestClient("myusername",
+	using System;
+	using RestAPI;
+	using System.Collections;
+
+	namespace ExampleRestAPI
+	{
+    	class Example
+    	{
+        	static void Main(string[] args)
+        	{
+            	RestClient rClient = new RestClient("myusername",
 "mypassword", RestClient.ENV_SANDBOX);
-            try
-            {
-                if(rClient.isLoginValid())
-                    Console.WriteLine("Login is OK!");
-                int credits = rClient.getCredits();
-                Console.WriteLine("Account have {0} credits.", credits);
-                Hashtable result = rClient.sendSMS("Hello SMS World!",
+            	try
+            	{
+                	if(rClient.isLoginValid())
+                    	Console.WriteLine("Login is OK!");
+                	int credits = rClient.getCredits();
+                	Console.WriteLine("Account have {0} credits.", credits);
+                	Hashtable result = rClient.sendSMS("Hello SMS World!",
 "447777123123", "Hello World", 72, "", "");
-                Console.WriteLine("Used {0} Credits, ID:{1}, Status: {2}",
+               	 	Console.WriteLine("Used {0} Credits, ID:{1}, Status: {2}",
 result["credits_used"], result["message_id"], result["status"]);
-            }
-            catch (RestClientException e)
-            {
-                Console.WriteLine(e.Message);
-                foreach (DictionaryEntry de in rClient.getLastErrors())
-                    Console.WriteLine("Error {0}: {1}", de.Key, de.Value);
-            }
-            Console.WriteLine();
-            Console.Write("Press ENTER to continue");
-            Console.ReadLine();
-        }
-    }
-}`
+            	}
+            	catch (RestClientException e)
+            	{
+                	Console.WriteLine(e.Message);
+                	foreach (DictionaryEntry de in rClient.getLastErrors())
+                    	Console.WriteLine("Error {0}: {1}", de.Key, de.Value);
+            	}
+            	Console.WriteLine();
+            	Console.Write("Press ENTER to continue");
+            	Console.ReadLine();
+        	}
+    		}
+	}
 
 That's it!  Obviously you would need to change the code to use your own API username/password.
 You can ﬁnd your API username and password (which may be different to your web interface
