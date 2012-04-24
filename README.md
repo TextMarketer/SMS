@@ -38,6 +38,8 @@ A Basic Command
 The following is a complete example of using the REST client library. The C# REST client may
 throw exceptions, which means that you need to place any function calls in a try-catch block, as
 follows:
+
+`
 using System;
 using RestAPI;
 using System.Collections;
@@ -72,7 +74,7 @@ result["credits_used"], result["message_id"], result["status"]);
             Console.ReadLine();
         }
     }
-}
+}`
 
 That's it!  Obviously you would need to change the code to use your own API username/password.
 You can ﬁnd your API username and password (which may be different to your web interface
@@ -101,15 +103,15 @@ generated documentation included. This is the best place to see what functions a
 what arguments they take. You can also read it online here:
 www.textmarketer.co.uk/developers/documents/csharp_client/.
 A simpliﬁed list of RestClient class methods is given below.
-• addGroup – create a new 'send group'
-• addNumbersToGroup – add new numbers to a 'send group'
-• createSubAccount – create a new sub account
-• getCredits – get the number of credits available in your account
-• getDeliveryReport – get the contents of a delivery report
-• getDeliveryReports – get a list of the available delivery reports
-• getGroup – get the numbers in a group
-• getGroups – get a list of the available 'send' and 'merge' groups
-• getKeyword – get the availability of a keyword for use on our 88802 short code number
+- addGroup – create a new 'send group'
+- addNumbersToGroup – add new numbers to a 'send group'
+- createSubAccount – create a new sub account
+- getCredits – get the number of credits available in your account
+- getDeliveryReport – get the contents of a delivery report
+- getDeliveryReports – get a list of the available delivery reports
+- getGroup – get the numbers in a group
+- getGroups – get a list of the available 'send' and 'merge' groups
+- getKeyword – get the availability of a keyword for use on our 88802 short code number
 • getLastErrors – get the last errors returned from the last function call (to the API)
 • getLastErrorCode – get the last error code raised from the last RestClient call
 • getLastErrorMessage – get the last error message raised from the last RestClient call
