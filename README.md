@@ -57,10 +57,8 @@ follows:
                     	Console.WriteLine("Login is OK!");
                 	int credits = rClient.getCredits();
                 	Console.WriteLine("Account have {0} credits.", credits);
-                	Hashtable result = rClient.sendSMS("Hello SMS World!",
-"447777123123", "Hello World", 72, "", "");
-               	 	Console.WriteLine("Used {0} Credits, ID:{1}, Status: {2}",
-result["credits_used"], result["message_id"], result["status"]);
+                	Hashtable result = rClient.sendSMS("Hello SMS World!","447777123123", "Hello World", 72, "", "");
+               	 	Console.WriteLine("Used {0} Credits, ID:{1}, Status: {2}",result["credits_used"], result["message_id"], result["status"]);
             	}
             	catch (RestClientException e)
             	{
