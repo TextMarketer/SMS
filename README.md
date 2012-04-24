@@ -50,8 +50,7 @@ follows:
     	{
         	static void Main(string[] args)
         	{
-            	RestClient rClient = new RestClient("myusername",
-"mypassword", RestClient.ENV_SANDBOX);
+            	RestClient rClient = new RestClient("myusername","mypassword", RestClient.ENV_SANDBOX);
             	try
             	{
                 	if(rClient.isLoginValid())
