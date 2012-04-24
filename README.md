@@ -73,7 +73,8 @@ follows:
     		}
 	}
 
-That's it!  Obviously you would need to change the code to use your own API username/password.
+That's it!  
+Obviously you would need to change the code to use your own API username/password.
 You can ﬁnd your API username and password (which may be different to your web interface
 username/password) via the web interface:
 http://apps.textmarketer.co.uk/account/ (Settings > API Settings)
@@ -91,8 +92,7 @@ Similarly, the sandbox system will not actually send SMS messages and will not d
 simulated sends.
 
 To use the sandbox simply specify the sandbox when you create the client object:
-RestClient rClient = new RestClient("myusername", "mypassword",
-RestClient.ENV_SANDBOX);
+	RestClient rClient = new RestClient("myusername", "mypassword",RestClient.ENV_SANDBOX);
 
 
 When you download the C# library (see Getting Started above) you will ﬁnd automatically
@@ -109,12 +109,12 @@ A simpliﬁed list of RestClient class methods is given below.
 - getGroup – get the numbers in a group
 - getGroups – get a list of the available 'send' and 'merge' groups
 - getKeyword – get the availability of a keyword for use on our 88802 short code number
-• getLastErrors – get the last errors returned from the last function call (to the API)
-• getLastErrorCode – get the last error code raised from the last RestClient call
-• getLastErrorMessage – get the last error message raised from the last RestClient call
-• Xml – get the xml string returned from the last RestClient call
-• isLoginValid – check the username/password credentials used are valid
-• sendSMS – send an SMS to a given recipient
-• transferCreditsToAccount – transfer credits to a speciﬁed account number
-• transferCreditsToUser – transfer credits to a speciﬁed account username
+- getLastErrors – get the last errors returned from the last function call (to the API)
+- getLastErrorCode – get the last error code raised from the last RestClient call
+- getLastErrorMessage – get the last error message raised from the last RestClient call
+- Xml – get the xml string returned from the last RestClient call
+- isLoginValid – check the username/password credentials used are valid
+- sendSMS – send an SMS to a given recipient
+- transferCreditsToAccount – transfer credits to a speciﬁed account number
+- transferCreditsToUser – transfer credits to a speciﬁed account username
 
